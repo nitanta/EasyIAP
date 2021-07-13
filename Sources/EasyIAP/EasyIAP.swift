@@ -70,7 +70,7 @@ public class EasyIAP: NSObject {
         }
     }
     
-    func restorePurchase(completion: @escaping ((IAPState)->Void)) {
+    public func restorePurchase(completion: @escaping ((IAPState)->Void)) {
         self.restoreCompletion = completion
         SKPaymentQueue.default().add(self)
         SKPaymentQueue.default().restoreCompletedTransactions()
